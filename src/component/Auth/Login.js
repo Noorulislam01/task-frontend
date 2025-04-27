@@ -9,15 +9,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple validation
     if (!email || !password) {
       setError('Please enter both email and password.');
       return;
     }
 
     try {
-      // Replace with your login API request
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/login`, {
+       const response = await fetch(`${process.env.REACT_APP_API_URL}/user/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,9 +26,9 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        // Save token to localStorage
+        
         localStorage.setItem('token', data.token);
-        navigate('/'); // Redirect to dashboard
+        navigate('/'); 
       } else {
         setError(data.message || 'Login failed. Please try again.');
       }
@@ -40,8 +38,8 @@ function Login() {
   };
 
   const signuppage = () => {
-    // alert('clicked');
-    navigate('/signup'); // Navigate to the home page
+    
+    navigate('/signup'); 
   };
 
 

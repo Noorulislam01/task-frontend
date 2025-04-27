@@ -6,7 +6,6 @@ function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 const navigate=useNavigate()
-  // Check if token is in localStorage when the component mounts
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -16,14 +15,13 @@ const navigate=useNavigate()
     }
   }, []);
 
-  // Handle logout functionality
-  const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from localStorage
-    setIsLoggedIn(false); // Update state to reflect logged-out status
-    navigate('/login'); // Redirect to login page
+   const handleLogout = () => {
+    localStorage.removeItem('token'); 
+    setIsLoggedIn(false); 
+    navigate('/login'); 
   };
 
-  // Handle profile icon click to toggle menu
+  
   const handleProfileClick = () => {
     setShowMenu(!showMenu);
   };

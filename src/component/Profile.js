@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header'; // Assuming you already have a Header.js
+import Header from './Header'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 
@@ -10,9 +10,9 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const token = localStorage.getItem('token'); // Assuming you saved token in localStorage
+        const token = localStorage.getItem('token'); 
         if (!token) {
-          navigate('/login'); // Redirect if token is missing
+          navigate('/login'); 
           return;
         }
 

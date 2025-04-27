@@ -3,7 +3,7 @@ import axios from 'axios';
 import { format } from 'date-fns';
 import { useNavigate } from 'react-router';
 import Header from '../Header';
-import { FaTrash } from 'react-icons/fa'; // DELETE ICON
+import { FaTrash } from 'react-icons/fa'; 
 
 const Project = () => {
   const [projects, setProjects] = useState({
@@ -64,7 +64,7 @@ const Project = () => {
     }
   };
 
-  // 🛑 DELETE Project
+  
   const handleDeleteProject = async (projectId) => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
 
@@ -75,7 +75,7 @@ const Project = () => {
           Authorization: `Bearer ${token}`
         }
       });
-      fetchProjects(); // Refresh after deletion
+      fetchProjects(); 
     } catch (error) {
       console.error('Error deleting project:', error);
       alert('Failed to delete project.');
@@ -121,7 +121,7 @@ const Project = () => {
                       <div className="absolute top-4 right-4">
                         <button
                           onClick={(e) => {
-                            e.stopPropagation(); // stop card click
+                            e.stopPropagation(); 
                             handleDeleteProject(project._id);
                           }}
                           className="text-red-500 hover:text-red-700"
@@ -158,7 +158,7 @@ const Project = () => {
               )}
             </>
           ) : (
-            // Add Project Tab
+            
             <div className="max-w-md mx-auto bg-white p-10 rounded-3xl shadow-2xl">
               <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-8">Create New Project</h2>
 
