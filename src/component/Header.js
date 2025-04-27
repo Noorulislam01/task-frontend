@@ -32,7 +32,7 @@ const navigate=useNavigate()
     <header className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* App Name */}
-        <h1 className="text-white text-xl sm:text-2xl font-bold">Task Tracker</h1>
+        <h1 className="text-white text-xl sm:text-2xl font-bold">Task Trackers</h1>
 
         {/* User Icon */}
         {isLoggedIn && (
@@ -44,21 +44,22 @@ const navigate=useNavigate()
 
             {/* Profile Options Menu */}
             {showMenu && (
-              <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg p-2 w-40">
-                <button
-                  onClick={() => navigate('/profile')}
-                  className="w-full text-left text-gray-700 py-2 px-4 hover:bg-gray-200"
-                >
-                  View Profile
-                </button>
-                <button
-                  onClick={handleLogout}
-                  className="w-full text-left text-red-500 py-2 px-4 hover:bg-gray-200"
-                >
-                  Logout
-                </button>
-              </div>
-            )}
+  <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg p-2 w-40 z-50">
+    <button
+      onClick={() => navigate('/profile')}
+      className="w-full text-left text-gray-700 py-2 px-4 hover:bg-gray-200"
+    >
+      View Profile
+    </button>
+    <button
+      onClick={handleLogout}
+      className="w-full text-left text-red-500 py-2 px-4 hover:bg-gray-200"
+    >
+      Logout
+    </button>
+  </div>
+)}
+
           </div>
         )}
       </div>

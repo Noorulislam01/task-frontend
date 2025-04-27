@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import { Link } from 'react-router';
 
 function Landing() {
   return (
@@ -8,12 +9,16 @@ function Landing() {
 
       {/* Dashboard Content */}
       <main className="max-w-7xl mx-auto p-4">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800">Dashboard</h2>
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition">
-            Manage Projects
-          </button>
-        </div>
+      <div className="flex justify-between items-center mb-6">
+  <h2 className="text-2xl font-semibold text-gray-800">Dashboard</h2>
+  
+  <Link to="/projects">
+    <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition">
+      Manage Projects
+    </button>
+  </Link>
+</div>
+
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -39,6 +39,12 @@ function Login() {
     }
   };
 
+  const signuppage = () => {
+    // alert('clicked');
+    navigate('/signup'); // Navigate to the home page
+  };
+
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-200 flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
@@ -75,13 +81,14 @@ function Login() {
           </button>
         </form>
         <div className="mt-4 text-center">
-          <p className="text-gray-600">
-            Don't have an account?{' '}
-            <a href="/signup" className="text-indigo-600 hover:underline">
-              Sign up here
-            </a>
-          </p>
-        </div>
+        <p className="text-gray-600">
+  Don't have an account?{' '}
+  <a onClick={signuppage} className="text-indigo-600 hover:underline cursor-pointer">
+    Sign up here
+  </a>
+</p>
+
+    </div>
       </div>
     </div>
   );
